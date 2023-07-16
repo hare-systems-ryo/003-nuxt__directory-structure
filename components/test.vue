@@ -1,13 +1,11 @@
 <script setup lang="ts">
 /* ----------------------------------------------------------------------------
-layouts\app.vue
+layouts\default.vue
 ---------------------------------------------------------------------------- */
 </script>
 <template>
-  <div>
+  <div class="border mt-3 pa-2 bg-yellow-lighten-3">
+    <div>ただTestと表示するだけのコンポーネント</div>
     <slot />
-    <div class="bg-primary px-2 py-1" style="position: fixed; inset: 0 auto auto 0; font-size: 12px; opacity: 0.7">
-      layout app
-    </div>
   </div>
 </template>

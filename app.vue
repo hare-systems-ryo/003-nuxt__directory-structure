@@ -12,26 +12,43 @@ useHead({
   link: [],
   script: [],
   noscript: [{ children: 'JavaScript is required' }],
-  title: 'Home',
+  title: '',
   bodyAttrs: {
     class: () => 'lang-ja',
     // class: () => (/^\/en/.test(route.path) ? 'lang-en' : 'lang-ja'),
   },
 });
+const storeApp = useStoreApp();
 // ----------------------------------------------------------------------------
 </script>
 <template>
   <nuxt-layout>
-    <nuxt-page />
+    <div class="px-6 pt-10">
+      <nuxt-page />
+    </div>
+    <client-only>
+      <div class="logs pa-2">
+        <template v-for="(row, index) in storeApp.state.logs" :key="index">
+          <div class="">{{ row }}</div>
+        </template>
+      </div>
+    </client-only>
   </nuxt-layout>
 </template>
 
 <style lang="scss" scoped>
-.test1 {
-  background-color: rgb(255, 239, 239);
-  padding: 10px;
-  .test2 {
-    background-color: rgb(185, 185, 255);
-  }
+.logs {
+  background-color: rgb(163, 50, 15);
+  color: rgb(255, 255, 255);
+  z-index: 1;
+  height: 10em;
+  min-width: 30%;
+  width: calc(100% - 30px);
+  overflow-x: auto;
+  overflow-y: auto;
+  position: fixed;
+  inset: auto 0 0 auto;
+  margin: 0 10px 10px 0;
+  opacity: 0.8;
 }
 </style>

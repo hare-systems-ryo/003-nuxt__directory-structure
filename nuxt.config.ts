@@ -8,6 +8,7 @@ export default defineNuxtConfig({
         formatter: 'stylish',
       },
     ],
+    '@pinia/nuxt',
     [
       '@invictus.codes/nuxt-vuetify',
       {

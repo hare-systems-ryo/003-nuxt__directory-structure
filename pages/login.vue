@@ -9,10 +9,12 @@ useHead({
 // ----------------------------------------------------------------------------
 </script>
 <template>
-  <v-container class="bg-white">
-    <div>〇〇アプリ ログイン</div>
-    <v-btn color="primary" to="/">Login</v-btn>
-  </v-container>
+  <div class="">
+    <v-container class="bg-white">
+      <div>〇〇アプリ ログイン</div>
+      <v-btn color="primary" to="/">Login</v-btn>
+    </v-container>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>

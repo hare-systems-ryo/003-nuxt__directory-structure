@@ -6,7 +6,6 @@ definePageMeta({
 useHead({
   title: 'Home',
 });
-
 const storeApp = useStoreApp();
 // ----------------------------------------------------------------------------
 </script>
@@ -28,5 +27,4 @@ const storeApp = useStoreApp();
     </v-container>
   </div>
 </template>
-
 <style lang="scss" scoped></style>

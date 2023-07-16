@@ -4,10 +4,10 @@ useHead({
   meta: [
     { 'http-equiv': 'refresh', content: '' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1.0,maximum-scale=1.0' },
-    // { name: 'keywords', content: () => 'keywords' },
-    // { name: 'format-detection', content: 'telephone=no' },
-    // { name: 'theme-color', content: '#FFF' },
-    // { hid: 'robots', name: 'robots', content: 'noindex' },
+    { name: 'keywords', content: () => 'keywords' },
+    { name: 'format-detection', content: 'telephone=no' },
+    { name: 'theme-color', content: '#FFF' },
+    { hid: 'robots', name: 'robots', content: 'noindex' },
   ],
   link: [],
   script: [],
@@ -15,7 +15,6 @@ useHead({
   title: '',
   bodyAttrs: {
     class: () => 'lang-ja',
-    // class: () => (/^\/en/.test(route.path) ? 'lang-en' : 'lang-ja'),
   },
 });
 const storeApp = useStoreApp();
@@ -35,7 +34,6 @@ const storeApp = useStoreApp();
     </client-only>
   </nuxt-layout>
 </template>
-
 <style lang="scss" scoped>
 .logs {
   background-color: rgb(163, 50, 15);

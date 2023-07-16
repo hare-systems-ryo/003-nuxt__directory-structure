@@ -1,22 +1,10 @@
-/* ----------------------------------------------------------------------------
-composables\use-store-app.ts
-// ----------------------------------------------------------------------------
-
-const storeApp = useStoreApp();
-
----------------------------------------------------------------------------- */
-
 import dayjs from 'dayjs';
 import { defineStore } from 'pinia';
-import type { RouteLocationNormalized } from '#vue-router';
 interface State {
   state: {
     logs: string[];
   };
 }
-
-// ローディング終了までの時間
-const isReadyDeray = 150;
 export const useStoreApp = defineStore({
   id: 'StoreApp',
   state: (): State => {
